@@ -19,7 +19,5 @@ export class ClienteComponent implements OnInit {
       width: '600px',
     });
 
-
-
   }
 }
