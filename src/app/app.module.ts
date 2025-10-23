@@ -9,15 +9,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomLayoutModule } from './custom-layout/custom-layout.module';
 import { MedicoComponent } from './Pages/medico/medico.component';
 import { ClienteComponent } from './Pages/cliente/cliente.component';
+import { IconModule } from '@visurel/iconify-angular';
+import { MatIconModule } from '@angular/material/icon';
+import { ModalCadastrarClienteComponent } from './core/lib/components/modal-cadastrar-cliente/modal-cadastrar-cliente.component';
+import { ModalCadastrarMedicoComponent } from './core/lib/components/modal-cadastrar-medico/modal-cadastrar-medico.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [AppComponent, MedicoComponent, ClienteComponent],
+  declarations: [AppComponent, MedicoComponent, ClienteComponent, ModalCadastrarClienteComponent, ModalCadastrarMedicoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
+    IconModule,
+    MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
     // Vex
     VexModule,
     CustomLayoutModule
