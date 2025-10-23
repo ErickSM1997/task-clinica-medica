@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VexModule } from '../@vex/vex.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomLayoutModule } from './custom-layout/custom-layout.module';
+import { MedicoComponent } from './Pages/medico/medico.component';
+import { ClienteComponent } from './Pages/cliente/cliente.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MedicoComponent, ClienteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

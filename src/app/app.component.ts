@@ -80,13 +80,13 @@ export class AppComponent {
       {
         type: 'link',
         label: 'Médicos',
-        route: '/',
+        route: '/medico',
         icon: icLayers
       },
         {
         type: 'link',
         label: 'Clientes',
-        route: '/',
+        route: '/cliente',
         icon: icLayers
       }
     ];
