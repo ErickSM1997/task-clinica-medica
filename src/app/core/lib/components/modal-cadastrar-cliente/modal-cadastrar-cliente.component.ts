@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { stagger60ms } from '../../../../../@vex/animations/stagger.animation';
+import { fadeInUp400ms } from '../../../../../@vex/animations/fade-in-up.animation';
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'vex-modal-cadastrar-cliente',
   templateUrl: './modal-cadastrar-cliente.component.html',
   styleUrls: ['./modal-cadastrar-cliente.component.scss']
 })
 export class ModalCadastrarClienteComponent implements OnInit {
+  form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private cd: ChangeDetectorRef,private fb: FormBuilder) {
+    this.form = this.fb.group({
+      cliente: [''],
+      servico: [''],
+      tempoEstimado: [''],
+      valorServico: [''],
+      responsavel: [''],
+      dtAtendimento: [''],
+      status: [''],
+    });
   }
+
+  ngOnInit(): void {}
 
 }

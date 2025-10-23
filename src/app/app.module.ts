@@ -15,6 +15,10 @@ import { ModalCadastrarClienteComponent } from './core/lib/components/modal-cada
 import { ModalCadastrarMedicoComponent } from './core/lib/components/modal-cadastrar-medico/modal-cadastrar-medico.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, MedicoComponent, ClienteComponent, ModalCadastrarClienteComponent, ModalCadastrarMedicoComponent],
@@ -27,6 +31,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatDialogModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
     // Vex
     VexModule,
     CustomLayoutModule
