@@ -19,6 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [AppComponent, MedicoComponent, ClienteComponent, ModalCadastrarClienteComponent, ModalCadastrarMedicoComponent],
@@ -36,6 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
+    MatInputModule,
     // Vex
     VexModule,
     CustomLayoutModule
