@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'vex-modal-cadastrar-medico',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-cadastrar-medico.component.scss']
 })
 export class ModalCadastrarMedicoComponent implements OnInit {
+  form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private cd: ChangeDetectorRef,private fb: FormBuilder) {
+    this.form = this.fb.group({
+     nomeCompleto: [''],
+      cpf: [''],
+      dtNascimento: [''],
+      sexo: [''],
+      telefone: [''],
+      cep: [''],
+      logradouro: [''],
+      numero: [''],
+      bairro: [''],
+      complemento: [''],
+      cidade: [''],
+      estado: [''],
+    });
   }
+  
+  ngOnInit(): void {}
 
 }

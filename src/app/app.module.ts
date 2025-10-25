@@ -15,13 +15,16 @@ import { ModalCadastrarClienteComponent } from './core/lib/components/modal-cada
 import { ModalCadastrarMedicoComponent } from './core/lib/components/modal-cadastrar-medico/modal-cadastrar-medico.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 
+const globalFormFieldOptions: MatFormFieldDefaultOptions = {
+  appearance: "standard",
+};
 
 @NgModule({
   declarations: [AppComponent, MedicoComponent, ClienteComponent, ModalCadastrarClienteComponent, ModalCadastrarMedicoComponent],
@@ -45,7 +48,11 @@ import {MatInputModule} from '@angular/material/input';
     VexModule,
     CustomLayoutModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: globalFormFieldOptions,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
