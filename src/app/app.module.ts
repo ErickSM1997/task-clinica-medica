@@ -20,7 +20,13 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { PageLayoutModule } from '../@vex/components/page-layout/page-layout.module';
+
+
 
 
 const globalFormFieldOptions: MatFormFieldDefaultOptions = {
@@ -45,6 +51,10 @@ const globalFormFieldOptions: MatFormFieldDefaultOptions = {
     ReactiveFormsModule,
     MatNativeDateModule,
     MatInputModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
+    PageLayoutModule,
     // Vex
     VexModule,
     CustomLayoutModule
